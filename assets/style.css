@@ -1,0 +1,36 @@
+.container{
+    background-image: url(./images/basketball.jpg);
+    repeat:none;
+    color: white;
+}
+
+header{
+    border:1px solid black;
+    height:300px;
+    width:80%;
+    font-size:20px;   
+    text-align:center;
+    margin:0 auto;
+}
+
+.underscores{
+    border:1px solid black;
+    height:150px;
+    width:80%;
+    font-size:20px;   
+    text-align:center;
+    margin:0 auto;
+}
+
+
+
+.wrongGuess{
+    border:1px solid black;
+    height:150px;
+    width:80%;
+    font-size:20px;   
+    text-align:center;
+    margin:0 auto;
+
+}
+
