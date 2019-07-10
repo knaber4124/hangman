@@ -2,7 +2,7 @@ body{
     background-color: black;
 }
 
-p.answers{
+#answers{
     text-align: center;
 }
 .header{
@@ -11,7 +11,7 @@ p.answers{
     white-space: nowrap;
 }
 .container{
-    background-image: url(./images/basketball.jpg);
+    background-image: url(./images/basketball1.jpg);
     background-size:cover;
     background-repeat:none;
     color: white;
