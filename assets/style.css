@@ -4,6 +4,7 @@ body{
 
 #answers{
     text-align: center;
+    font-size: 22px;
 }
 .header{
     text-align: center;
@@ -48,6 +49,6 @@ header{
 }
 .btn{
     position: relative;
-    right: 90px;
+    right: 145px;
 }
 

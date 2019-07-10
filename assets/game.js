@@ -4,8 +4,8 @@ const choices = ["court", "steal", "teams", "layup", "block", "dunk"];
 //setting up base let statements
 let randNumber = Math.floor(Math.random() * choices.length);
 let chosenWord = choices[randNumber];
-let rightGuess = [];
-let wrongGuess = [];
+let rightGuesses = [];
+let wrongGuesses = [];
 let underscore = [];
 
 console.log(chosenWord);
@@ -25,36 +25,33 @@ document.addEventListener("keypress", (event) => {
     console.log(chosenWord.indexOf(keyword));
     if (chosenWord.indexOf(keyword) > -1) {
         console.log(true);
-        rightGuess.push(keyword);
-        console.log(rightGuess);
+        rightGuesses.push(keyword);
+        console.log(rightGuesses);
     }
     else {
         
         wrongGuess.push(keyword);
-        console.log(wrongGuess);
+        console.log(wrongGuesses);
     }
     underscore[chosenWord.indexOf(keyword)] = keyword;
     console.log(underscore);
 
+    
 
-
-
-
-
-
-
-
+    
 })
-// 
+let underscoreJoin = underscore.join('');
+// console.log(underscoreJoin);
+
 function changeAnswers () {
     let answers = document.getElementById('answers');
-    answers.innerHTML = 'WORKING';
+    answers.innerHTML = underscoreJoin;
 }
 window.onload = changeAnswers;
 
 //function answerWrong () {
-    //let wrongWord = document.getElementById('wrongWord');
-    //wrongWord.innerHTML = wrongGuess;
+  //  let wrongWord = document.getElementById('wrongWord');
+  //  wrongWord.innerHTML = wrongGuesses;
 //}
 //window.onload = answerWrong;
 
@@ -62,6 +59,7 @@ window.onload = changeAnswers;
 function refreshPage() {
     window.location.reload();
 }
+[].join
 
 
 
