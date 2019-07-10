@@ -1,5 +1,5 @@
 //Create an array of words
-const choices=["court","steal","teams","layup","dribble","pass","block","dunk"];
+const choices=["court","steal","teams","layup","block","dunk"];
 
 //Choose word randomly
 let randNumber= Math.floor(Math.random() * choices.length);
@@ -25,8 +25,38 @@ document.addEventListener("keypress", (event) => {
     console.log(chosenWord.indexOf(keyword));
     if(chosenWord.indexOf(keyword)>-1 ){
         console.log(true);
+        rightGuess.push(keyword);
+        console.log(rightGuess);
     }
+    else{
+        console.log(false);
+        wrongGuess.push(keyword);
+        console.log(wrongGuess);
+    }
+    underscore[chosenWord.indexOf(keyword)] = keyword;
+        console.log(underscore);
+
+    
+
+    
+
+    
+
+    
+    
 })
+
+
+if(underscore===chosenWord){
+        alert=('YOU WIN!');
+    }
+
+
+
+function refreshPage(){
+    window.location.reload();
+} 
+
         
     
 
