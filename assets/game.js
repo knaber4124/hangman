@@ -9,6 +9,8 @@ let wrongGuesses = [];
 let underscore = [];
 let underscoreJoined=[];
 let guessesRemain=10;
+let wins=0;
+let losses=0;
 
 console.log(chosenWord);
 console.log(guessesRemain);
@@ -34,7 +36,7 @@ document.addEventListener("keypress", (event) => {
 
         wrongGuesses.push(keyword);
         console.log('wrongGuesses ' + wrongGuesses);
-        
+        guessesRemain--;
     }
     underscore[chosenWord.indexOf(keyword)] = keyword;
     console.log('underscore '+underscore);
@@ -72,6 +74,9 @@ console.log('underscoreString '+underscoreString);
 
 if (underscoreString===chosenWord){
     alert('YOU WIN!');
+};
+if (guessesRemain===0){
+    alert('You Lose');
 };
 
 function refreshPage() {
