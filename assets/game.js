@@ -7,10 +7,12 @@ let chosenWord = choices[randNumber];
 let rightGuesses = [];
 let wrongGuesses = [];
 let underscore = [];
+let underscoreJoined=[];
+let guessesRemain=10;
 
 console.log(chosenWord);
-
-//generate underscores in console
+console.log(guessesRemain);
+//generate underscores
 let genUnderscore = () => {
     for (let i = 0; i < chosenWord.length; i++) {
         underscore.push('_');
@@ -26,40 +28,56 @@ document.addEventListener("keypress", (event) => {
     if (chosenWord.indexOf(keyword) > -1) {
         console.log(true);
         rightGuesses.push(keyword);
-        console.log(rightGuesses);
+        console.log('rightGuesses '+rightGuesses);
     }
     else {
+
+        wrongGuesses.push(keyword);
+        console.log('wrongGuesses ' + wrongGuesses);
         
-        wrongGuess.push(keyword);
-        console.log(wrongGuesses);
     }
     underscore[chosenWord.indexOf(keyword)] = keyword;
-    console.log(underscore);
+    console.log('underscore '+underscore);
 
-    
 
-    
+
+
 })
-let underscoreJoin = underscore.join('');
-// console.log(underscoreJoin);
+let underscoreJoin = underscore.join(' ');
+ console.log(underscoreJoin);
+ underscoreJoined.push(underscoreJoin);
 
-function changeAnswers () {
+
+function changeAnswers() {
     let answers = document.getElementById('answers');
     answers.innerHTML = underscoreJoin;
-}
+};
 window.onload = changeAnswers;
 
+// use push on rightAnswer into underscoreJoin
+// change button to rerun randNumber
+// usejQuery append to change selected word guesses
+
 //function answerWrong () {
-  //  let wrongWord = document.getElementById('wrongWord');
-  //  wrongWord.innerHTML = wrongGuesses;
+//let wrongWord = document.getElementById('wrongWord');
+//wrongWord.innerHTML = wrongGuesses;
+
 //}
 //window.onload = answerWrong;
 
 //button functionality to restart game
+let underscoreString= rightGuesses.toString();
+
+console.log('underscoreString '+underscoreString);
+
+if (underscoreString===chosenWord){
+    alert('YOU WIN!');
+};
+
 function refreshPage() {
-    window.location.reload();
+    window.location.reload(randNumber);
 }
-[].join
+
 
 
 

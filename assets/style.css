@@ -1,5 +1,9 @@
 body{
     background-color: black;
+    background-image: url(./images/basketball1.jpg);
+    background-size:cover;
+    background-repeat:none;
+    color: white;
 }
 
 #answers{
@@ -11,15 +15,13 @@ body{
     overflow: hidden;
     white-space: nowrap;
 }
-.container{
-    background-image: url(./images/basketball1.jpg);
-    background-size:cover;
-    background-repeat:none;
-    color: white;
+.result{
+    text-align: center;
+    border:1px solid white;
+    height:150px;
 }
-
 header{
-    border:1px solid black;
+    
     height:300px;
     width:80%;
     font-size:20px;   
@@ -39,7 +41,7 @@ header{
 
 
 .wrongGuess{
-    border:1px solid black;
+    border:1px solid white;
     height:150px;
     width:80%;
     font-size:20px;   
@@ -47,8 +49,10 @@ header{
     margin:0 auto;
 
 }
+.text-center{
+
+}
 .btn{
-    position: relative;
-    right: 145px;
+    
 }
 
