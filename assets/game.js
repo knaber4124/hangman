@@ -12,7 +12,6 @@ let guessesRemain = 10;
 let wins = 0;
 let losses = 0;
 
-
 console.log(chosenWord);
 console.log(guessesRemain);
 
@@ -25,8 +24,6 @@ $('.wrongWord').append(wrongGuesses);
 if (guessesRemain === 0) {
     alert('You Lose');
 };
-
-
 
 //generate underscores
 let genUnderscore = () => {
@@ -63,13 +60,7 @@ document.addEventListener("keypress", (event) => {
     }
     underscore[chosenWord.indexOf(keyword)] = keyword;
     console.log('underscore ' + underscore);
-
-
-
-
 })
-
-
 
 let underscoreJoin = underscore.join(' ');
 console.log(underscoreJoin);
@@ -99,12 +90,3 @@ function refreshPage() {
     let guessesRemain = 10;
     let wrongGuesses = [];
 };
-
-
-
-
-
-
-
-
-
