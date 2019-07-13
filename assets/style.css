@@ -21,8 +21,7 @@ body{
     height:150px;
     font-size: 22px;
 }
-header{
-    
+header{   
     height:300px;
     width:80%;
     font-size:20px;   
@@ -39,8 +38,6 @@ header{
     margin:0 auto;
 }
 
-
-
 .wrongGuess{
     border:1px solid white;
     height:150px;
@@ -48,12 +45,4 @@ header{
     font-size:20px;   
     text-align:center;
     margin:0 auto;
-
 }
-.text-center{
-
-}
-.btn{
-    
-}
-

@@ -12,6 +12,7 @@ let guessesRemain = 10;
 let wins = 0;
 let losses = 0;
 
+
 console.log(chosenWord);
 console.log(guessesRemain);
 
@@ -49,11 +50,12 @@ document.addEventListener("keypress", (event) => {
 
         $('.wrongWord').append(keyword);
         console.log('wrongGuesses ' + wrongGuesses);
-        guessesRemain --;
+        guessesRemain--;
         $('.guessRemain').text(guessesRemain);
+        //if guesses depleted, alert loss, increment losses and reset game
         if (guessesRemain === 0) {
             alert('You Lose');
-            losses ++;
+            losses++;
             window.location.reload(randNumber);
             let guessesRemain = 10;
             let wrongGuesses = [];
@@ -73,7 +75,7 @@ let underscoreJoin = underscore.join(' ');
 console.log(underscoreJoin);
 underscoreJoined.push(underscoreJoin);
 
-
+//removing commas in array and displaying in DOM
 function changeAnswers() {
     let answers = document.getElementById('answers');
     answers.innerHTML = underscoreJoin;
@@ -81,21 +83,15 @@ function changeAnswers() {
 window.onload = changeAnswers;
 $('#answers').append(changeAnswers);
 
-// use push on rightAnswer into underscoreJoin
-// change button to rerun randNumber
-// usejQuery append to change selected word guesses
-
-
-
-
 let underscoreString = rightGuesses.toString();
 
 console.log('underscoreString ' + underscoreString);
 //Win Alert
 if (underscoreString === chosenWord) {
     alert('YOU WIN!');
+    wins++;
 };
-//Loss Alert
+
 
 // button tto generate new game
 function refreshPage() {
