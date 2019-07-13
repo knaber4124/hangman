@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
     <title>Word Guess Game</title>
 </head>
 
@@ -55,20 +57,21 @@
         </div>
         <div class='col-md-3 text-center result'>
             <p>Wins</p>
-            <p class='winResult'>0</p>
+            <p class='winResult'></p>
         </div>
         <div class='col-md-4  result'>
             <p>Wrong Guesses:</p>
-            <p id="wrongWord">f</p>
+            <br>
+            <p class="wrongWord"></p>
         </div>
         <div class='col-md-3 text-center result'>
             <p>Losses</p>
             <br>
-            <p class='lossResult'>0</p>
+            <p class='lossResult'></p>
         </div>
         <div class='col-md-1'>
         </div>
-    <br>
+        <br>
     </div>
     <div class='row'>
         <div class='col-md-4'>
@@ -76,7 +79,7 @@
         <div class='col-md-4 text-center result'>
             <p>Guesses Remaining</p>
             <br>
-            <p class='guessesRemain'>0</p>
+            <p class='guessRemain'></p>
         </div>
         <div class='col-md-4'>
         </div>
