@@ -1,5 +1,5 @@
 //Establish Word Choices
-const choices = ["court", "steal", "teams", "layup", "block", "dunk"];
+const choices = ["court", "steal", "teams", "layup", "block", "dunk","players"];
 
 //setting up base let statements
 let randNumber = Math.floor(Math.random() * choices.length);
@@ -10,16 +10,20 @@ let underscore = [];
 let underscoreJoined = [];
 let guessesRemain = 10;
 let wins = 0;
-let losses = 0;
+let loss = 0;
 
 console.log(chosenWord);
 console.log(guessesRemain);
 
 //DOM manipulation
 $('.winResult').append(wins);
-$('.lossResult').append(losses);
+$('.lossResult').append(loss);
 $('.guessRemain').append(guessesRemain);
 $('.wrongWord').append(wrongGuesses);
+
+$(document).ready(function() {
+
+});
 
 if (guessesRemain === 0) {
     alert('You Lose');
@@ -52,7 +56,7 @@ document.addEventListener("keypress", (event) => {
         //if guesses depleted, alert loss, increment losses and reset game
         if (guessesRemain === 0) {
             alert('You Lose');
-            losses++;
+            loss++;
             window.location.reload(randNumber);
             let guessesRemain = 10;
             let wrongGuesses = [];
